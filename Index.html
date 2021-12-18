@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAask1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="maindiv">
+
+        <!-- Hero section  starts-->
+        <secion class="hero">
+            <div class="slideshow-container">
+
+                <div class="topnav" id="myTopnav">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#Pricinge">Pricinge</a>
+                    <a href="#BLOG">BLOG</a>
+                    <a href="#Contacts">Contacts</a>
+
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars xxx"></i>
+                    </a>
+                </div>
+
+                <div class="font-img"></div>
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./media/images/kali-linux-wallpaper-v6.png" style="width:100%; height: 55vh; ">
+                <div class="text"> one</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./media/images//muhannad-ajjan-sL2BRR1cuvM-unsplash.jpg" style="width:100%; height: 55vh;">
+                <div class="text">Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./media/images/images.jpg" style="width:100%; height: 55vh;">
+                <div class="text">Three</div>
+            </div>
+            <div class="right_Left_arrow">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        // nacbarscript
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        // carousal script
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+
+
+    <div class="hero_matter" id="home">
+        <h1 class=" Hero_heading ">Mayank Industry</h1>
+    </div>
+
+
+    </secion>
+    <!-- Hero section  ends-->
+
+    <!-- Welcome section start -->
+
+    <section class="welcome ">
+
+        <div class="welcomesection ">
+            <div class="top ">
+                <!-------- # WELCOME - PAGE -------------------------------------------->
+                <section class="about" id="welcome">
+                    <h1 class="welheading">Welcome Coders</h1>
+                    <div class="about-para contact-section">
+
+                        <div class="w-50">
+                            <p>Debugging is twice as hard as writing the code in the first place.Therfore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it
+                            </p>
+                        </div>
+
+                        <div class="container w-50 p-5">
+
+                            <i class="fas fa-keyboard fa-10x "></i>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="sectionContain ">
+
+                        <div class="column ">
+                            <div class="card ">
+                                <div class="imglogo ">
+
+                                    <!-- <img class="logoimg " src=".//media/pngs/notification icon.png " alt="logo " /> -->
+                                    <i class="fas fa-bell fa-7x topicon "></i>
+                                </div>
+                                <br>
+                                <h1 class="cardh1 ">Notification</h1><br>
+                                <p class="cardDetails ">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, quas suscipit! Exercitationem distinctio ex quasi dolorem, quae provident tenetur explicabo quia vitae?
+                                </p><br>
+                                <div class="buttons ">
+                                    <button class=" button ">Notify Me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column ">
+                            <div class="card ">
+                                <div class="imglogo ">
+                                    <i class="far fa-envelope fa-7x topicon"> </i>
+
+                                    <!-- <img class="logoimg " src="./media/pngs/mail icon.png " alt="logo " /> -->
+                                </div>
+                                <br>
+                                <h1 class="cardh1 ">Mail</h1><br>
+                                <p class="cardDetails ">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, quas suscipit! Exercitationem distinctio ex quasi dolorem, quae provident tenetur explicabo quia vitae?
+                                </p><br>
+                                <div class="buttons ">
+                                    <button class=" button ">Mail services activate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column ">
+                            <div class="card ">
+                                <div class="imglogo ">
+                                    <!-- <img class="logoimg " src="media/pngs/consectioure.png " alt=" logo " /> -->
+                                    <i class="fab fa-react fa-7x topicon "></i>
+                                </div>
+                                <br>
+                                <h1 class="cardh1 ">Our services</h1><br>
+                                <p class="cardDetails ">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, quas suscipit! Exercitationem distinctio ex quasi dolorem, quae provident tenetur explicabo quia vitae?
+                                </p><br>
+                                <div class="buttons ">
+                                    <button class=" button ">Know more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+        </div>
+        <br>
+        <hr style="height: 9; width: 70vw; display: flex; margin: auto; " />
+
+        </section>
+
+
+        <!-- Welcome section Ends -->
+
+        <!-- Projects section start -->
+
+        <br>
+        <section class="project " id="projects">
+
+            <br>
+
+            <h1 class="Heading ">
+                PROJECTS
+            </h1>
+            <br>
+
+            <div class="row ">
+
+                <div class="collprject ">
+                    <div class="card ">
+                        <div class="imglogo ">
+                            <img class="logoimg " src="https://source.unsplash.com/random " alt="Swiggy clone project " />
+                        </div>
+                        <br>
+                        <div class="procontain ">
+                            <h1 class="cardh1 ">Swiggy Clone </h1><br>
+                            <p class="cardDetails ">
+                                I have completed my first project . It's OPPO Official site | OPPO India ,Clone using Html, Css, Flexbox and media queries which is fully responsive. It was a great experience I learned a lot from this.
+                            </p><br>
+                            <div class="buttons ">
+                                <button class=" button ">Launch Case Study</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="collprject ">
+                    <div class="card ">
+                        <div class="imglogo ">
+                            <img class="logoimg " src="https://source.unsplash.com/random " alt="opppo official site clone project " />
+                        </div>
+                        <br>
+                        <div class="procontain ">
+                            <h1 class="cardh1 ">OPPO Clone</h1><br>
+                            <p class="cardDetails ">
+                                I have completed my first project . It's OPPO Official site | OPPO India ,Clone using Html, Css, Flexbox and media queries which is fully responsive. It was a great experience I learned a lot from this.
+                            </p><br>
+                            <div class="buttons ">
+                                <button class=" button ">Launch Case Study</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="collprject ">
+                    <div class="card ">
+                        <div class="imglogo ">
+                            <img class="logoimg " src="https://source.unsplash.com/random " alt="Cowin project " />
+                        </div>
+                        <br>
+                        <div class="procontain ">
+                            <h1 class="cardh1 ">Swiggy</h1><br>
+                            <p class="cardDetails ">
+                                I have completed my first project . It's OPPO Official site | OPPO India ,Clone using Html, Css, Flexbox and media queries which is fully responsive. It was a great experience I learned a lot from this.
+                            </p><br>
+                            <div class="buttons ">
+                                <button class=" button ">Launch Case Study</button>
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="collprject ">
+                    <div class="card ">
+                        <div class="imglogo ">
+                            <img class="logoimg " src="https://source.unsplash.com/random " alt="sec part " />
+                        </div>
+                        <br>
+
+                        <div class="procontain ">
+                            <h1 class="cardh1 ">OPPO Watches</h1><br>
+                            <p class="cardDetails ">
+                                I have completed my first project . It's OPPO Official site | OPPO India ,Clone using Html, Css, Flexbox and media queries which is fully responsive. It was a great experience I learned a lot from this.
+                            </p><br>
+                            <div class="buttons ">
+                                <button class=" button ">Launch Case Study</button>
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <br>
+        <br>
+
+        <!-- Projects section end -->
+
+        <!-- Pricing Table section  start -->
+        <section class="pricing " id="Pricinge">
+            <h1 class="Heading ">Pricing Table</h1>
+            <br>
+
+            <div class="pricecoloumns ">
+                <div class="colun ">
+                    <div class="card ">
+                        <h3 class="cardh1 ">Standard Plans</h3>
+                        <ul class="offers ">
+                            <li>Free</li>
+                            <li>1 year membershi</li>
+                            <li>15 days free trail</li>
+                            <li>ads free</li>
+                            <li></li>
+                        </ul>
+                        <div class="buttons ">
+                            <button class=" button ">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="colun ">
+                    <div class="card ">
+                        <h3 class="cardh1 ">Business Plans</h3>
+                        <ul class="offers ">
+                            <li>Free</li>
+                            <li>1 year membershi</li>
+                            <li>15 days free trail</li>
+                            <li>ads free</li>
+                            <li></li>
+                        </ul>
+                        <div class="buttons ">
+                            <button class=" button ">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="colun ">
+                    <div class="card ">
+                        <h3 class="cardh1 ">Pemium Plans</h3>
+                        <ul class="offers ">
+                            <li>Free</li>
+                            <li>1 year membershi</li>
+                            <li>15 days free trail</li>
+                            <li>ads free</li>
+
+                        </ul>
+                        <div class="buttons ">
+                            <button class=" button ">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <!-- Procing Tanble section  end -->
+
+        <!-- Video Project section start -->
+        <section class="video">
+            <h1 style="color: white;" class="Heading">Video Projects</h1>
+            <br><br>
+            <div class="videos ">
+
+
+                <video width="3vw" height="22vh" autoplay muted>
+          <source
+            src="./media/videos/Swiggy - Google Chrome 2021-03-04 19-31-49.mp4 "
+            type="video/mp4 "
+                 />
+          <source src="movie.ogg " type="video/ogg " />
+          Your browser does not support the video tag.
+        </video> <br>
+
+                <video width="3vw" height=" 22vh " autoplay muted>
+          <source
+            src="./media/videos/OPPO Official Site _ OPPO India - Google Chrome 2021-03-01 20-06-59.mp4 "
+            type="video/mp4 "
+          />
+          <source src="movie.ogg " type="video/ogg " />
+          Your browser does not support the video tag.
+        </video> <br>
+
+                <video width="3vw" height="22vh" autoplay muted>
+                <source src="./media/videos/Mj - Google Chrome 2021-02-03 18-56-22.mp4 " type="video/mp4 " />
+                <source src="movie.ogg " type="video/ogg " /> Your browser does not support the video tag.
+                </video> <br>
+
+                <video width="3vw" height=" 22vh " autoplay muted>
+          <source
+            src="./media/videos/Mayank Jaiswal Home - Google Chrome 2021-01-26 17-57-47.mp4 "
+            type="video/mp4 "
+          />
+          <source src="movie.ogg " type="video/ogg " />
+          Your browser does not support the video tag.
+        </video>
+
+            </div> <br>
+        </section>
+
+        <!-- Video Project section end -->
+
+        <!-- Mj Team section start -->
+        <!-- <section id="team" class="container1">
+            <h1>Our Power Our Team</h1>
+            <div class="team-members">
+
+                <div class="team-detail">
+                    <div class="member">
+                        <img src="images/team01.jpg" alt="">
+                        <div class="social-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+
+                        </div>
+                    </div>
+                    <h3>Mrs. Woman</h3>
+                    <h4>Founder</h4>
+                </div>
+
+                <div class="team-detail">
+                    <div class="member">
+                        <img src="images/team02.jpg" alt="">
+                        <div class="social-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+
+                        </div>
+                    </div>
+                    <h3>Mrs. Woman</h3>
+                    <h4>Co-Founder</h4>
+                </div>
+
+                <div class="team-detail">
+                    <div class="member">
+                        <img src="images/team03.jpg" alt="">
+                        <div class="social-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+
+                        </div>
+                    </div>
+                    <h3>Mr. Man</h3>
+                    <h4>CEO</h4>
+                </div>
+            </div>
+
+            <div class="team-members">
+                <div class="team-detail">
+                    <div class="member">
+                        <img src="images/team04.jpg" alt="">
+                        <div class="social-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+
+                        </div>
+                    </div>
+                    <h3>Mr. Man</h3>
+                    <h4>Manager</h4>
+                </div>
+
+                <div class="team-detail">
+                    <div class="member">
+                        <img src="images/team05.jpg" alt="">
+                        <div class="social-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+
+                        </div>
+                    </div>
+                    <h3>Mrs. Woman</h3>
+                    <h4>Marketing head</h4>
+                </div>
+
+                <div class="team-detail">
+                    <div class="member">
+                        <img src="images/team06.jpg" alt="">
+                        <div class="social-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+
+                        </div>
+                    </div>
+                    <h3>Mr. Man</h3>
+                    <h4>Cyber Security</h4>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Mj Team section end -->
+
+
+        <!-- blog section starts -->
+        <section class="blog" id="BLOG">
+            <h1 class="Heading "> BLOG</h1>
+
+            <div class="row ">
+
+                <div class="collprject ">
+                    <div class="card ">
+                        <div class="imglogo ">
+                            <img class="logoimg " src="https://source.unsplash.com/random " alt="Swiggy clone project " />
+                        </div>
+                        <br>
+                        <div class="procontain ">
+                            <h1 class="cardh1 ">Swiggy Clone </h1><br>
+                            <p class="cardDetails ">
+                                I have completed my firsT It's OPPO Official site | OPPO India ,Clone using Html, Css, Flexbox and media queries which is fully responsive. vfdexperience I learned a lot from this.
+                            </p><br>
+                            <div class="buttons ">
+                                <button class=" button ">Launch Case Study</button>
+                            </div>
+                            <br>
+                        </div>
+                        <br>
+                    </div>
+
+                </div>
+
+                <div class="collprject ">
+                    <div class="card ">
+                        <div class="imglogo ">
+                            <img class="logoimg " src="https://source.unsplash.com/random " alt="opppo official site clone project " />
+                        </div>
+                        <br>
+                        <div class="procontain ">
+                            <h1 class="cardh1 ">OPPO Clone</h1><br>
+                            <p class="cardDetails ">
+                                I have completed my It's OPPO Official site | OPPO India ,Clone using Html, Css, Flexbox and media queries which is fully responsive. vfdexperience I learned a lot from this.
+                            </p><br>
+                            <div class="buttons ">
+                                <button class=" button ">Launch Case Study</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="collprject ">
+                    <div class="card ">
+                        <div class="imglogo ">
+                            <img class="logoimg " src="https://source.unsplash.com/random " alt="sec part " />
+                        </div>
+                        <br>
+                        <div class="procontain ">
+                            <h1 class="cardh1 ">OPPO Watches</h1><br>
+                            <p class="cardDetails ">
+                                I have completed my It's OPPO Official site | OPPO India ,Clone using Html, Css, Flexbox and media queries which is fully responsive. vfdexperience I learned a lot from this.
+                            </p><br>
+                            <div class="buttons ">
+                                <button class=" button ">Launch Case Study</button>
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- blog section ends -->
+
+        <!-- Contact section start -->
+        <section class="contact " id="Contacts">
+            <div class="contactss ">
+                <div class="contactHead ">
+                    <h1 class="Heading ">
+                        CONTACT
+                    </h1>
+                </div>
+                <div class="contact-section">
+                    <div class="w-50">
+                        <iframe class="" src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235526.90925049002!2d75.72376322860708!3d22 .724228427949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh
+                            !5e0!3m2!1sen!2sin!4v1628329417424!5m2!1sen!2sin " width="100% " height="100% " frameborder="0 " allowfullscreen></iframe>
+                        <!-- <div class=" w-50 ">contact form</div> -->
+                    </div>
+
+                    <div class="container w-50 p-5 ">
+                        <form action="action_page.php ">
+
+                            <label for="fname ">Name</label>
+                            <input type="text " id="fname " name="Fullname " placeholder="Your name.. ">
+
+                            <label for="email "><b>Email</b></label>
+                            <input type="text " placeholder="Enter Email " name="email " id="email " required>
+
+
+                            <label for="subject ">Subject</label>
+                            <textarea id="subject " name="subject " placeholder="Write something.. " style="height:50px "></textarea>
+
+                            <label for="subject ">Message</label>
+                            <textarea id="subject " name="subject " placeholder="Write something.. " style="height:200px "></textarea>
+                            <button class="btn success">Send</button>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+
+        </section>
+        <!-- Contact section end -->
+
+        <!-- footer section start -->
+        <!-------- # FOOTER ---------------------------------------------------->
+        <footer class="footer">
+            <div class="footer-element ">
+                <h3>Office Adress</h3>
+                <p>Indore<br> 420<br> It park </p>
+            </div>
+            <div class="footer-element ">
+                <h3>Follow us</h3>
+                <p class="follow ">
+
+                    <a href="# " class="fa fa-facebook "></a>
+                    <a href="# " class="fa fa-twitter "></a>
+                    <a href="# " class="fa fa-google "></a>
+                    <br>
+                    <a href="# " class="fa fa-linkedin "></a>
+                    <a href="# " class="fa fa-skype "></a>
+                    <a href="# " class="fa fa-instagram "></a>
+                </p>
+            </div>
+            <div class="footer-element ">
+                <h3>Contact us</h3>
+                <p>+912546853 <br> mjOffice@gmail.com <br> mj2546@gmail.com</p>
+            </div>
+        </footer>
+        <hr>
+        <!-- footer section end -->
+
+
+</body>
+
+</html>
